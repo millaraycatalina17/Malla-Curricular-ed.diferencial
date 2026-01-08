@@ -1,1 +1,105 @@
+:root {
+    --color-fondo: #f9fbf9;
+    --color-primario: #f8d7da; /* Rosado suave */
+    --color-secundario: #d4edda; /* Verde suave */
+    --color-texto: #4a4a4a;
+    --color-bloqueado: #e2e3e5;
+    --color-aprobado: #a8e6cf;
+    --color-borde: #ffc1cc;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 { color: #d63384; }
+
+#mensaje-motivacional {
+    font-style: italic;
+    color: #6c757d;
+}
+
+.malla-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    align-items: flex-start;
+}
+
+.semestre {
+    min-width: 250px;
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border: 1px solid var(--color-primario);
+}
+
+.semestre h3 {
+    text-align: center;
+    border-bottom: 2px solid var(--color-primario);
+    padding-bottom: 10px;
+    color: #b05a7a;
+}
+
+.ramo {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    position: relative;
+}
+
+.ramo:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Estado Aprobado */
+.ramo.aprobado {
+    background-color: var(--color-aprobado);
+    text-decoration: line-through;
+    border-color: #81c784;
+}
+
+/* Estado Bloqueado */
+.ramo.bloqueado {
+    background-color: var(--color-bloqueado);
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+#reset-btn {
+    margin-top: 15px;
+    padding: 8px 16px;
+    background-color: #f8d7da;
+    border: 1px solid #f5c2c7;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#reset-btn:hover { background-color: #f1aeb5; }
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .malla-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .semestre { width: 90%; }
+}
 
